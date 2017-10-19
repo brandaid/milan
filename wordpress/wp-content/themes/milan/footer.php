@@ -1,3 +1,5 @@
+	<?php if( ! is_page( array( 14, 16  ) ) ) 
+	{ ?>
 	<section class="box slider">
 		<div class="container">
 			<h4 class="subtitle-underlined">Testimonials</h4>
@@ -25,6 +27,7 @@
 			</div>
 		</div>
 	</section>
+	<?php } ?>
 	<section class="box newsletter">
 		<div class="container">
 			<h3>Looking for more information?</h3>

@@ -26,6 +26,9 @@ a, a:hover, a:active, a:focus {
 .cf:after {
     clear: both;
 }
+.page-template-page-blog {
+	background: $gray-lighter;
+}
 // 768px
 @media all and (min-width: $screen-portrait) {
 	.container {

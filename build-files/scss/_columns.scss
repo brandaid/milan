@@ -1,0 +1,89 @@
+.two-columns {
+	font-size: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		font-size: 16px;
+		line-height: 100%;
+	}
+}
+
+.box-post {
+	background: white;
+	padding: 30px;
+	margin-bottom: 50px;
+	@include boxshadow;
+	small {
+		font-size: 14px;
+		text-transform: uppercase;
+		color: $brand-primary;
+		display: block;
+		margin-bottom: 20px;
+	}
+	h2 a {
+		font-size: 28px;
+		font-weight: bold;
+		color: $dark-primary;
+		margin: 0;
+		&:hover {
+			color: black;
+		}
+	}
+	hr {
+		border: 0;
+		margin: 20px 0;
+		height: 4px;
+		background: $brand-primary;
+		display: block;
+		width: 50px;
+	}
+	p, a {
+		font-size: 17px;
+		font-weight: 300;
+	}
+	a.link { 
+		text-decoration: underline;
+		&:hover {
+			color: black;
+		}
+	}
+
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.box-post {
+		padding: 60px;
+		small {
+			margin-bottom: 30px;
+		}
+		h2 a {
+			font-size: 38px;
+			line-height: 1.2em;
+		}
+		hr {
+			margin: 36px 0;
+		}
+		p, a {
+			font-size: 21px;
+		}
+
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.two-columns {
+		li {
+			display: inline-block;
+			width: 50%;
+			padding: 0 22px;
+			@include border-box;
+		}
+	}
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+}

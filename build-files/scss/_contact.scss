@@ -1,0 +1,83 @@
+.table-boxes {
+	span {
+		background: $gray-light;
+		display: block;
+	}
+	span:nth-child(2) {
+		background: #f9fafb;
+	}
+}
+
+.contact-info {
+	text-align: center;
+	padding: 40px 15px;
+	img {
+		width: 100%;
+		height: auto;
+		max-width: 45px;
+		margin-bottom: 28px;
+	}
+	h4 {
+		font-weight: 500;
+		font-size: 26px;
+		font-family: $primary-font;
+	}
+	p {
+		font-weight: 300;
+		color: #4a4f55;
+		font-size: 18px;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.table-boxes {
+		display: table;
+		width: 100%;
+		span {
+			display: table-cell;
+			width: 50%;
+			vertical-align: top;
+			text-align: right;
+		}
+		span:nth-child(2) {
+			text-align: left;
+		}
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.table-boxes {
+		span {
+			.contact-info {
+				display: inline-block;
+				width: 400px;
+				padding: 40px 45px;
+				@include border-box;
+			}
+		}
+		span:nth-child(2) {
+			text-align: left;
+		}
+	}
+	
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.table-boxes {
+		span {
+			.contact-info {
+				width: 560px;
+				p {
+					max-width: 310px;
+					@include center;
+				}
+			}
+		}
+	}
+}
