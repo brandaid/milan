@@ -1,0 +1,170 @@
+.box {
+	text-align: center;
+	padding: 90px 0;
+}
+.welcome {
+	h4, h2 {
+		font-family: $primary-font;
+		font-weight: 700;
+	}
+	h4 {
+		text-transform: uppercase;
+		color: #bbc4cb;
+		font-size: 15px;
+	}
+	h2 {
+		font-size: 26px;
+		font-weight: 500;
+		margin-bottom: 50px;
+	}
+	p {
+		margin-bottom: 50px;
+		font-weight: 300;
+		max-width: 850px;
+		@include center;
+	}
+}
+
+.slider {
+	background: $gray-lighter;
+	h4 {
+		text-transform: uppercase;
+		color: $brand-primary;
+		font-size: 14px;
+		font-family: $primary-font;
+		font-weight: 700;
+		&:after {
+			content: "";
+			height: 2px;
+			background: $gray;
+			width: 30px;
+			display: block;
+			margin: 20px 0;
+			@include center;
+		}
+	}
+	h2 {
+		font-weight: bold;
+	}
+
+}
+.newsletter {
+	background: $gray-light;
+	h3 {
+		font-weight: bold;
+		font-size: 24px;
+	}
+	p {
+		font-weight: 300;
+	}
+}
+
+.about {
+	p {
+		text-align: left;
+		font-weight: 300;
+	}
+	.container {
+		max-width: 850px;
+	}
+}
+.offer {
+	background: url(images/about.jpg) no-repeat center center;
+	background-size: cover;
+	padding-bottom: 300px;
+	h3 {
+		font-weight: bold;
+	}
+	p {
+		font-weight: 300;
+		margin-bottom: 60px;
+		max-width: 830px;
+		@include center;
+	}
+}
+
+.four-columns {
+	@include formated-list;
+	li {
+		padding-left: 30px;
+		padding-right: 30px;
+		@include border-box;
+	}
+	img {
+		max-width: 55px;
+		height: auto;
+	}
+	h4 {
+		font-family: $primary-font;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin: 30px 0 20px 0;
+	}
+	p {
+		color: #4a4f55;
+		font-size: 18px;
+	}
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.box {
+		text-align: center;
+		padding: 100px 0;
+	}
+	.newsletter {
+		h3 {
+			font-size: 38px;
+		}
+		p {
+			font-size: 21px;
+			margin-bottom: 53px;
+		}
+	}
+	.offer {
+		padding-bottom: 500px;
+	}
+	.four-columns {
+		li {
+			display: inline-block;
+			vertical-align: top;
+			width: 49%;
+		}
+	}
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.slider {
+		h2 {
+			font-size: 50px;
+			margin-bottom: 120px;
+		}
+	}
+	.offer {
+		h3 {
+			font-size: 50px;
+		}
+	}
+	.newsletter {
+		h3 {
+			font-size: 50px;
+		}
+	}
+
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.offer {
+		padding-bottom: 600px;
+	}
+	.four-columns {
+		li {
+			width: 24%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}

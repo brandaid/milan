@@ -1,0 +1,40 @@
+.button {
+	border: 1px solid $brand-primary;
+	color: $brand-primary;
+	padding: 23px 40px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
+	background: transparent;
+	border-radius: 4px;
+	&:hover {
+		background: $brand-primary;
+		color: white;
+	}
+}
+.button-featured {
+	color: white;
+	font-weight: 500;
+	display: block;
+	background: $brand-primary;
+	padding: 25px 30px;
+    font-size: 18px;
+    line-height: 23px;
+    max-width: 250px;
+    @include center;
+}
+
+// 768px
+@media all and (min-width: $screen-portrait) {
+
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+}

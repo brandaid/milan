@@ -1,0 +1,132 @@
+.banner {
+	background: url(images/apartments.jpg) center center no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 500px;
+	display: table;
+	width: 100%;
+	&:before {
+		@include absolute;
+		@include transition;
+		content: "";
+		z-index: 999;
+		background: rgba(88,137,181,.85);
+	}
+}
+.call-to-action article:nth-child(2) > div {
+	&:before {
+		background: rgba(154,182,211,.85); 
+	}
+}
+.center-box {
+	display: table-cell;
+	height: 500px;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.center-box--info {
+	position: relative;
+	z-index: 999;
+	h2 {
+		line-height: 1em;
+		font-size: 40px;
+	}
+	small, h2 {
+		font-weight: 700;
+		color: white;
+		margin-bottom: 10px;
+	}
+	small {
+		text-transform: uppercase;
+		font-size: 15px;
+	}
+}
+
+.card {
+	display: none;
+	-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+	background: white;
+	padding: 20px;
+	text-align: left;
+	width: 75%;
+	@include center;
+	@include transition;
+	h3 {
+		font-weight: 700;
+		font-size: 18px;
+	}
+	p {
+		font-size: 15px;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
+.banner:hover {
+	&:before {
+		opacity: 0;
+	}
+	.box1 {
+		display: none;
+	}
+	.card {
+		display: block;
+	}
+}
+// 768px
+@media all and (min-width: $screen-portrait) {
+	.call-to-action {
+		display: table;
+		width: 100%;
+	}
+	.call-to-action--item {
+		display: table-cell;
+		width: 50%;
+		vertical-align: top;
+	}
+
+}
+
+// 992px
+@media all and (min-width: $screen-landscape) {
+	.center-box--info {
+		h2 {
+			font-size: 60px;
+		}
+	}
+	.card {
+		padding: 40px;
+		width: 57%;
+		h3 {
+			font-size: 22px;
+		}
+		p {
+			font-size: 17px;
+		}
+	}
+}
+
+// 1200px
+@media all and (min-width: $screen-desktop) {
+	.banner {
+		height: 800px;
+	}
+	.center-box {
+		height: 800px;
+	}
+	.card {
+		padding: 50px;
+		max-width: 500px;
+		@include border-box;
+		h3 {
+			font-size: 24px;
+			margin-bottom: 35px;
+		}
+		p {
+			font-size: 17px;
+			margin-bottom: 35px;
+		}
+	}
+}
