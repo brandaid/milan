@@ -27,26 +27,6 @@
 
 .slider {
 	background: $gray-lighter;
-	h4 {
-		text-transform: uppercase;
-		color: $brand-primary;
-		font-size: 14px;
-		font-family: $primary-font;
-		font-weight: 700;
-		&:after {
-			content: "";
-			height: 2px;
-			background: $gray;
-			width: 30px;
-			display: block;
-			margin: 20px 0;
-			@include center;
-		}
-	}
-	h2 {
-		font-weight: bold;
-	}
-
 }
 .newsletter {
 	background: $gray-light;
@@ -89,9 +69,10 @@
 		padding-left: 30px;
 		padding-right: 30px;
 		@include border-box;
+		margin-bottom: 30px;
 	}
 	img {
-		max-width: 55px;
+		max-width: 45px;
 		height: auto;
 	}
 	h4 {
@@ -104,9 +85,20 @@
 	p {
 		color: #4a4f55;
 		font-size: 18px;
+		font-weight: 300;
 	}
 }
 
+.three-columns {
+	@extend .four-columns;
+	li {
+		margin-bottom: 60px;
+	}
+}
+
+.gray {
+	background: lighten($gray-light,4%);
+}
 // 768px
 @media all and (min-width: $screen-portrait) {
 	.box {
@@ -136,12 +128,6 @@
 
 // 992px
 @media all and (min-width: $screen-landscape) {
-	.slider {
-		h2 {
-			font-size: 50px;
-			margin-bottom: 120px;
-		}
-	}
 	.offer {
 		h3 {
 			font-size: 50px;
@@ -152,7 +138,11 @@
 			font-size: 50px;
 		}
 	}
-
+	.three-columns {
+		li {
+			width: 32%;
+		}
+	}
 }
 
 // 1200px
@@ -165,6 +155,11 @@
 			width: 24%;
 			padding-left: 15px;
 			padding-right: 15px;
+		}
+	}
+	.three-columns {
+		li {
+			width: 32%;
 		}
 	}
 }

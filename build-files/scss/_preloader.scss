@@ -1,6 +1,7 @@
 #loader {
-    background:black;
+    background: white;
     @include absolute;
+    z-index: 999999999;
 }
 
 // 768px

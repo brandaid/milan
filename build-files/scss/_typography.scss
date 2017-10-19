@@ -96,6 +96,35 @@ ol ol, ul ol {
 		height: 30px; 
 	}
 }
+
+.subtitle-underlined {
+	text-transform: uppercase;
+	color: $brand-primary;
+	font-size: 14px;
+	font-family: $primary-font;
+	font-weight: 700;
+	&:after {
+		content: "";
+		height: 2px;
+		background: $gray;
+		width: 30px;
+		display: block;
+		margin: 20px 0;
+		@include center;
+	}
+}
+
+.bolder {
+	font-weight: bold;
+	margin: 0;
+}
+
+.lighter {
+	font-weight: 300;
+}
+.margin-bottom-60 {
+	margin-bottom: 60px;
+}
 // 768px
 @media all and (min-width: $screen-portrait) {
 	p {
@@ -148,6 +177,12 @@ ol ol, ul ol {
   	p {
 		font-size: 21px;
 		line-height: 1.5;
+	}
+	.bolder {
+		font-size: 50px;
+	}
+	.margin-bottom-120 {
+		margin-bottom: 120px;
 	}
 }
 

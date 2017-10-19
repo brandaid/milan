@@ -19,6 +19,17 @@
 	}
 }
 
+.no-image-top {
+	@extend .image-top;
+	background: $gray-lighter;
+	&:after {
+		display: none;
+	}
+	h1 {
+		color: $dark-primary;
+	}
+}
+
 // 768px
 @media all and (min-width: $screen-portrait) {
 }
@@ -28,7 +39,7 @@
 	.image-top {
 		padding-top: 200px;
 		h1 {
-			font-size: 66px;
+			font-size: 60px;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 	<section class="box slider">
 		<div class="container">
-			<h4>Testimonials</h4>
-			<h2>What Our Clients Are Saying</h2>
+			<h4 class="subtitle-underlined">Testimonials</h4>
+			<h2 class="bolder margin-bottom-120">What Our Clients Are Saying</h2>
 			
 			<div class="owl-carousel owl-testimonials">
 			    <div class="item">
