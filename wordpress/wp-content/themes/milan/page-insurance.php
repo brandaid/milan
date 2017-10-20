@@ -9,58 +9,66 @@
 ?>
 <?php get_header(); ?>
 <?php the_post(); ?>
-	<section class="image-top">
-		<h1>About Us</h1>
+	<?php
+	$thumb_id = get_post_thumbnail_id();
+	$thumb_url = wp_get_attachment_image_src($thumb_id,'top_image', true);
+	?>
+	<section class="image-top" style="background: url('<?php echo $thumb_url[0]; ?>') center 0 / cover no-repeat;">
+		<h1><?php the_title(); ?></h1>
 	</section>
 	<section class="box about">
 		<div class="container">
-			<h2 class="title-icon">Trust an Agent Who Understands <br> Investment Real Estate</h2>
-			<p>At Milan our specialization is what makes us different. By focusing on the needs of income producing real-estate Owners, management, and operations we have tailored our offerings to match the unique needs of this client base. Our commitment to this industry better serves us in identifying client goals, understanding these complex Risks, developing unique and strategic plans, and ultimately controlling the cost of the risk.</p>
+			<h2 class="title-icon"><?php the_field('icon_title'); ?></h2>
+			<p><?php the_field('copy'); ?></p>
 		</div>
 	</section>
 	<section class="image-and-text">
 		<div class="container">
-			<img src="<?php bloginfo('template_url'); ?>/images/insurance.jpg" alt="">
+			<?php
+				$attachment_id = get_field('image_box');
+				$size = "medium_new";
+				$image = wp_get_attachment_image_src( $attachment_id, $size );
+			?>
+		    <img src= "<?php echo $image[0]; ?>" />
 			<div class="content-info">
 				<div class="info">
-					<h3>What We Protect</h3>
-					<ul>
-						<li>Traditional Multi-Family</li>
-						<li>Student Housing</li>
-						<li>Senior Housing</li>
-						<li>Subsidized Housing</li>
-						<li>RAD Conversions</li>
-						<li>Historic Conversions</li>
-					</ul>
+					<?php if(get_field('white_box_title')): ?>
+					<h3><?php the_field('white_box_title'); ?></h3>
+					<?php endif; ?>
+					<?php if(get_field('white_box_copy')): ?>
+					<?php the_field('white_box_copy'); ?>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>			
 	</section>
 	<section class="box">
-		<h4 class="subtitle-underlined">APartment Insurance</h4>
-		<h2 class="bolder">Available Products</h2>
-		<p class="lighter">Ask about our Business Owner’s Policy (BOP) today!</p>
+		<?php if(get_field('small_text_2')): ?>
+		<h4 class="subtitle-underlined"><?php the_field('small_text_2'); ?></h4>
+		<?php endif; ?>
+		<?php if(get_field('title_2')): ?>
+		<h2 class="bolder"><?php the_field('title_2'); ?></h2>
+		<?php endif; ?>
+		<?php if(get_field('copy_2')): ?>
+		<p class="lighter"><?php the_field('copy_2'); ?></p>
+		<?php endif; ?>
 	</section>
 	<section class="steps">
 		<article class="step">
-			<h3>Primary Coverages</h3>
-			<p>Property <br>
-			General Liability <br> 
-			Excess Liability <br>
-			Umbrella</p>
-			<a href="" class="button">Button</a>
+			<?php the_field('step_1'); ?>
+			<?php 
+			$link = get_field('link_step_1');
+			if( $link ): ?>
+				<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button"><?php echo $link['title']; ?></a>
+			<?php endif; ?>
 		</article>
 		<article class="step two">
-			<h3>Optional Coverages</h3>
-			<p>Cyber Liability <br>
-			Crime/Employee Dishonesty <br>
-			Directors & Officers Liability <br>
-			Errors & Omissions Liability <br>
-			Renters Liability <br>
-			Utility Bonds <br>
-			Workers Compensation <br>
-			Earthquake & Flood</p>
-			<a href="" class="button">Button</a>
+			<?php the_field('step_2'); ?>
+			<?php 
+			$link = get_field('link_step_2');
+			if( $link ): ?>
+				<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button"><?php echo $link['title']; ?></a>
+			<?php endif; ?>
 		</article>	
 	</section>
 <?php get_footer(); ?>

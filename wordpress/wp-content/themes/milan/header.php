@@ -25,20 +25,25 @@
 </head>
 <body <?php body_class('cbp-spmenu-push'); ?> >
 	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-		<ul id="menu-mobile" class="sm sm-blue">
-			<li><a href="#">About Us</a></li>
-			<li><a href="#">Insurance</a>
-				<ul>
-					<li><a href="#">Apartments</a></li>
-					<li><a href="#">Commercial Real Estate</a></li>
-				</ul>
-			</li>
-			<li><a href="#">What Makes Us Different</a></li>
-			<li><a href="#">Blog</a></li>
-		</ul>
-		<ul class="nav-featured">
-			<li><a href="#" class="button-featured">Contact Us</a></li>
-		</ul>
+		<?php
+		 	wp_nav_menu(
+		 		array(
+		 			'theme_location'	=> 'main_menu',
+		 			'menu_class'	    => 'sm sm-blue',
+		 			'menu_id'           => 'menu-mobile',
+		 			'container'         => 'ul'
+		 			)
+		 	);
+		?>
+		<?php
+		 	wp_nav_menu(
+		 		array(
+		 			'theme_location'	=> 'featured_menu',
+		 			'menu_class'	    => 'nav-featured',
+		 			'container'         => 'ul'
+		 			)
+		 	);
+		?>
 	</nav>
 	<div id="loader"></div>
 	<header class="header">
@@ -52,22 +57,27 @@
 					<span></span>
 					<span></span>
 				</a>
-				<ul id="menu-desktop" class="sm sm-blue">
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Insurance</a>
-						<ul>
-							<li><a href="#">Apartments</a></li>
-							<li><a href="#">Commercial Real Estate</a></li>
-						</ul>
-					</li>
-					<li><a href="#">What Makes Us Different</a></li>
-					<li><a href="#">Blog</a></li>
-				</ul>
+				<?php
+				 	wp_nav_menu(
+				 		array(
+				 			'theme_location'	=> 'main_menu',
+				 			'menu_class'	    => 'sm sm-blue',
+				 			'menu_id'           => 'menu-desktop',
+				 			'container'         => 'ul'
+				 			)
+				 	);
+				?>
 			</div>
 			<div class="col-nav-featured">
-				<ul class="nav-featured">
-					<li><a href="#" class="button">Contact Us</a></li>
-				</ul>
+				<?php
+				 	wp_nav_menu(
+				 		array(
+				 			'theme_location'	=> 'featured_menu',
+				 			'menu_class'	    => 'nav-featured',
+				 			'container'         => 'ul'
+				 			)
+				 	);
+				?>
 			</div>
 		</div>
 	</header>

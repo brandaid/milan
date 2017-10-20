@@ -9,12 +9,20 @@
 ?>
 <?php get_header(); ?>
 <?php the_post(); ?>
-		<section class="hero-banner">
+
+		<?php
+			$image_id = get_field('image');
+			$image_size = 'hero_image';
+			$image_array = wp_get_attachment_image_src($image_id, $image_size);
+			$image_url = $image_array[0];
+		?>
+
+		<section class="hero-banner" style="background: url(<?php echo $image_url; ?>)no-repeat; background-size: cover;">
 			<div class="container">
 				<div class="center-hero">
 					<div class="center-hero--info">
-						<h1>Investment Focused. <br>Insurance Minded.</h1>
-						<p>for the Multifamily and Commercial Real Estate Industry</p>
+						<h1><?php the_field('title'); ?></h1>
+						<p><?php the_field('subtitle'); ?></p>
 					</div>
 				</div>
 			</div>
@@ -24,49 +32,88 @@
 		</section>
 		<section class="box welcome" id="welcome">
 			<div class="container">
-				<h4>Welcome to Milan</h4>
-				<h2>Your Expert Source for Apartment Insurance</h2>
-				<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta. Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow fatback strip steak.</p>
-				<a href="" class="button">What Makes Us Different?</a>
+				<h4><?php the_field('small_text'); ?></h4>
+				<h2><?php the_field('box_title'); ?></h2>
+				<p><?php the_field('box_copy'); ?></p>
+				<?php 
+				$link = get_field('button');
+				if( $link ): ?>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button"><?php echo $link['title']; ?></a>
+				<?php endif; ?>
 			</div>
 		</section>
 		<section class="call-to-action">
+
+			
+			<?php $the_query = new WP_Query( 'page_id=8' ); ?>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			
+			<?php
+				$image_id = get_field('on_home_image');
+				$image_size = 'insurance_home';
+				$image_array = wp_get_attachment_image_src($image_id, $image_size);
+				$image_url = $image_array[0];
+			?>
+
 			<article class="call-to-action--item">
-				<div class="banner">
+				<div class="banner" style="background: url(<?php echo $image_url; ?>)no-repeat; background-size: cover;">
 					<div class="center-box">
 						<div class="center-box--info">
 							<div class="box1">
-								<h2>Apartments</h2>
-								<small>Services & Options</small>
+								<h2><?php the_title(); ?></h2>
+								<small><?php the_field('on_home_small_text') ?></small>
 							</div>
 
 							<div class="card">
-								<h3>Lorem Ipsum Commercial Properties Main Header Goes Right Here.</h3>
-								<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-								<a href="">Tell me more</a>
+								<h3><?php the_field('on_home_title') ?></h3>
+								<p><?php the_field('on_home_copy') ?></p>
+								<?php 
+								$link = get_field('cta');
+								if( $link ): ?>
+									<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+								<?php endif; ?>
 							</div>
-
 						</div>
 					</div>
 				</div>
 			</article>
+			
+			<?php endwhile; wp_reset_query(); ?>
+
+			<?php $the_query = new WP_Query( 'page_id=25' ); ?>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			
+			<?php
+				$image_id = get_field('on_home_image');
+				$image_size = 'insurance_home';
+				$image_array = wp_get_attachment_image_src($image_id, $image_size);
+				$image_url = $image_array[0];
+			?>
+
 			<article class="call-to-action--item">
-				<div class="banner">
+				<div class="banner" style="background: url(<?php echo $image_url; ?>)no-repeat; background-size: cover;">
 					<div class="center-box">
 						<div class="center-box--info">
 							<div class="box1">
-								<h2>Commercial <br>Real Estate</h2>
-								<small>Services & Options</small>
+								<h2><?php the_title(); ?></h2>
+								<small><?php the_field('on_home_small_text') ?></small>
 							</div>
 
 							<div class="card">
-								<h3>Lorem Ipsum Commercial Properties Main Header Goes Right Here.</h3>
-								<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-								<a href="">Tell me more</a>
+								<h3><?php the_field('on_home_title') ?></h3>
+								<p><?php the_field('on_home_copy') ?></p>
+								<?php 
+								$link = get_field('cta');
+								if( $link ): ?>
+									<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
 				</div>
 			</article>
+			
+			<?php endwhile; wp_reset_query(); ?>
+
 		</section>
 <?php get_footer(); ?>

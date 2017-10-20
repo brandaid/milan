@@ -34,6 +34,17 @@
 	transition: all 0.3s ease;
 }
 
+.nav-featured {
+	li {
+		a {
+			@extend .button-featured;
+			&:hover {
+				background: darken($brand-primary, 10%);
+			}
+		}	
+	}
+}
+
 @media screen and (max-width: 55.1875em){
 	.cbp-spmenu-horizontal {
 		font-size: 75%;

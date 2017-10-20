@@ -83,7 +83,7 @@
 			content: "2";
 		}
 	}
-	h3 {
+	h1, h2, h3, h4, h5, h6 {
 		font-weight: 700;
 		font-size: 22px;
 		font-family: $primary-font;
@@ -124,7 +124,7 @@
 		width: 50%;
 		vertical-align: top;
 		border-bottom: 1px solid #e1e1e1;
-		h3 {
+		h1, h2, h3, h4, h5, h6 {
 			font-size: 27px;
 			margin-bottom: 40px;
 		}
