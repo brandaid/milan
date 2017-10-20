@@ -65,6 +65,12 @@ a, a:hover, a:active, a:focus {
 .page-template-page-blog {
   background: #fcfcfd; }
 
+.margin-bottom-30 {
+  margin-bottom: 30px; }
+
+.margin-bottom-60 {
+  margin-bottom: 60px; }
+
 @media all and (min-width: 768px) {
   .container {
     margin-left: auto;
@@ -83,7 +89,7 @@ a, a:hover, a:active, a:focus {
   .container {
     max-width: 1300px; } }
 
-.button {
+.button, .button-solid {
   border: 1px solid #5281ac;
   color: #5281ac;
   padding: 23px 40px;
@@ -95,7 +101,7 @@ a, a:hover, a:active, a:focus {
   -webkit-border-radius: 4px;
   border-radius: 4px; }
 
-.button:hover {
+.button:hover, .button-solid:hover {
   background: #5281ac;
   color: white; }
 
@@ -110,6 +116,13 @@ a, a:hover, a:active, a:focus {
   max-width: 250px;
   margin-left: auto;
   margin-right: auto; }
+
+.button-solid {
+  background: #5281ac;
+  color: white; }
+
+.button-solid:hover {
+  background: #426789; }
 
 .header {
   padding: 20px 0; }
@@ -156,7 +169,7 @@ a, a:hover, a:active, a:focus {
     width: 25%; }
   .header .container .col-nav-featured {
     text-align: right; }
-  .header .container .col-nav-featured .button {
+  .header .container .col-nav-featured .button, .header .container .col-nav-featured .button-solid {
     padding: 18px 40px; } }
 
 .footer-top {
@@ -789,9 +802,6 @@ ol ol, ul ol {
 .lighter {
   font-weight: 300; }
 
-.margin-bottom-60 {
-  margin-bottom: 60px; }
-
 @media all and (min-width: 768px) {
   p {
     line-height: 1.375; }
@@ -834,6 +844,10 @@ ol ol, ul ol {
     font-size: 50px; }
   .margin-bottom-120 {
     margin-bottom: 120px; } }
+
+.responsive {
+  width: 100%;
+  height: auto; }
 
 #login {
   padding-top: 40px; }
@@ -2541,13 +2555,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   display: block;
   margin-bottom: 20px; }
 
-.box-post h2 a {
+.box-post h1, .box-post h2, .box-post h2 a {
   font-size: 28px;
   font-weight: bold;
   color: #062d5d;
   margin: 0; }
 
-.box-post h2 a:hover {
+.box-post h1:hover, .box-post h2:hover, .box-post h2 a:hover {
   color: black; }
 
 .box-post hr {
@@ -2573,7 +2587,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     padding: 60px; }
   .box-post small {
     margin-bottom: 30px; }
-  .box-post h2 a {
+  .box-post h1, .box-post h2, .box-post h2 a {
     font-size: 38px;
     line-height: 1.2em; }
   .box-post hr {
@@ -2603,7 +2617,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background: white;
   width: 100%;
   height: 60px;
-  padding: 10px;
+  padding: 16px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: none; }
@@ -2623,3 +2637,54 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .form-search button:hover {
   color: black; }
+
+body.single .main {
+  padding-top: 100px; }
+
+body.single .main .container {
+  max-width: 850px; }
+
+body.single .main .container .box-post {
+  background: transparent;
+  padding: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.box-author {
+  margin-bottom: 35px; }
+
+.box-author figure {
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: 10px; }
+
+.box-author p {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 5px 0 0 0; }
+
+.box-author p a {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase; }
+
+.box-author p a:hover {
+  color: black; }
+
+@media all and (min-width: 992px) {
+  body.single .main {
+    padding-top: 200px; }
+  body.single .main .container {
+    max-width: 850px; }
+  body.single .main .container .box-post {
+    background: transparent;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  body.single .main .container .box-post h1 {
+    font-size: 50px; } }

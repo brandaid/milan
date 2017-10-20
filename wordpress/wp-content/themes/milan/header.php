@@ -23,7 +23,7 @@
 	<![endif]-->
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>class="cbp-spmenu-push">
+<body <?php body_class('cbp-spmenu-push'); ?> >
 	<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
 		<ul id="menu-mobile" class="sm sm-blue">
 			<li><a href="#">About Us</a></li>
@@ -71,3 +71,4 @@
 			</div>
 		</div>
 	</header>
+	<main class="main">

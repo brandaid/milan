@@ -29,6 +29,12 @@ a, a:hover, a:active, a:focus {
 .page-template-page-blog {
 	background: $gray-lighter;
 }
+.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+.margin-bottom-60 {
+	margin-bottom: 60px;
+}
 // 768px
 @media all and (min-width: $screen-portrait) {
 	.container {

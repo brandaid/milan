@@ -1,5 +1,6 @@
-	<?php if( ! is_page( array( 14, 16  ) ) ) 
-	{ ?>
+	</main>
+	<?php if (!is_page(16) && !is_page(14) && !is_single() ) { ?>
+
 	<section class="box slider">
 		<div class="container">
 			<h4 class="subtitle-underlined">Testimonials</h4>

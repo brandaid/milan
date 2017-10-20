@@ -21,7 +21,7 @@
 		display: block;
 		margin-bottom: 20px;
 	}
-	h2 a {
+	h1, h2, h2 a {
 		font-size: 28px;
 		font-weight: bold;
 		color: $dark-primary;
@@ -58,7 +58,7 @@
 		small {
 			margin-bottom: 30px;
 		}
-		h2 a {
+		h1, h2, h2 a {
 			font-size: 38px;
 			line-height: 1.2em;
 		}

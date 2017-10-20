@@ -25,6 +25,15 @@
     @include center;
 }
 
+.button-solid {
+	@extend .button;
+	background: $brand-primary;
+	color: white;
+	&:hover {
+		background: darken($brand-primary,10%);
+	}
+}
+
 // 768px
 @media all and (min-width: $screen-portrait) {
 

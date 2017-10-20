@@ -9,7 +9,6 @@
 ?>
 <?php get_header(); ?>
 <?php the_post(); ?>
-	<main>
 		<section class="hero-banner">
 			<div class="container">
 				<div class="center-hero">
@@ -70,5 +69,4 @@
 				</div>
 			</article>
 		</section>
-	</main>
 <?php get_footer(); ?>
