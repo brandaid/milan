@@ -1,6 +1,5 @@
 	</main>
 	<?php if (!is_page('blog') && !is_page('whats-make-us-different') && !is_single() && !is_search() && !is_category() ) { ?>
-
 	<section class="box slider">
 		<div class="container">
 			<h4 class="subtitle-underlined"><?php the_field('subtitle','option'); ?></h4>
