@@ -4,7 +4,6 @@
 		<div class="container">
 			<h4 class="subtitle-underlined"><?php the_field('subtitle','option'); ?></h4>
 			<h2 class="bolder margin-bottom-120"><?php the_field('title','option'); ?></h2>
-			
 			<div class="owl-carousel owl-testimonials">
 
 				<?php while(has_sub_field('testimonials','option')): ?>
