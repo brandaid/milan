@@ -1,5 +1,5 @@
 	</main>
-	<?php if (!is_page(16) && !is_page(14) && !is_single() && !is_search() && !is_category() ) { ?>
+	<?php if (!is_page('blog') && !is_page('whats-make-us-different') && !is_single() && !is_search() && !is_category() ) { ?>
 
 	<section class="box slider">
 		<div class="container">
