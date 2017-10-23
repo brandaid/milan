@@ -24,18 +24,20 @@ body.single {
 		overflow: hidden;
 		float: left;
 		margin-right: 10px;
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 	p {
 		font-size: 16px;
 		font-weight: 300;
 		margin: 5px 0 0 0;
-		a {
+		span {
 			font-weight: 700;
 			font-size: 16px;
 			text-transform: uppercase;
-			&:hover {
-				color: black;
-			}
+			color: $link-color;
 		}
 	}
 }

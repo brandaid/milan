@@ -8,146 +8,72 @@
 */
 ?>
 <?php get_header(); ?>
-<?php the_post(); ?>
+
 	<section class="no-image-top">
 		<h1>Latest News</h1>
 	</section>
 	<section>
 		<div class="container">
 			<ul class="two-columns">
-				<li>input</li>
 				<li>
-					<form action="" class="form-search">
-						<input type="text" placeholder="Search">
-						<button class="fa fa-search"></button>
+					<form id="category-select" class="category-select" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+			            <?php
+			                $args = array(
+			                    'show_option_none' => __( 'Categories'),
+			                    'show_count'       => 0,
+			                    'orderby'          => 'name',
+			                    'echo'             => 0,
+			                    'option_none_value'  => null,
+			                    //'show_option_none' => '', 
+			                );
+			            ?>
+			            <?php $select  = wp_dropdown_categories( $args ); ?>
+			            <?php $replace = "<select$1 onchange='return this.form.submit()'>"; ?>
+			            <?php $select  = preg_replace( '#<select([^>]*)>#', $replace, $select ); ?>
+			            <?php echo $select; ?>
+			            <noscript>
+			                <input type="submit" value="View" />
+			            </noscript>
+			        </form>
+				</li>
+				<li>
+					<form id="searchform" action="<?php bloginfo('url'); ?>/" method="get" class="form-search" role="search">
+						<input type="text" placeholder="Search" value="<?php the_search_query(); ?>" name="s" id="s">
+						<button id="searchsubmit" class="fa fa-search"></button>
 					</form>
 				</li>
 			</ul>
 
 			<ul class="two-columns">
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
-				<li>
-					<article class="box-post">
-						<small>Category Title</small>
-						<h2><a href="">9 Mistakes to Avoid When Leasing a Property</a></h2>
-						<hr>
-						<p>Bacon ipsum dolor amet rump shank t-bone, short loin drumstick boudin turkey chuck cow picanha meatloaf fatback strip steak. Shank fatback beef ribs leberkas, ground round doner chuck ribeye meatloaf. Landjaeger boudin prosciutto pancetta.</p>
-						<a href="" class="link">Read More &raquo;</a>
-					</article>
-				</li>
+
+			<?php 
+			// the query to set the posts per page to 3
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$args = array('posts_per_page' => 2, 'paged' => $paged );
+			query_posts($args); ?>
+			<!-- the loop -->
+			<?php if ( have_posts() ) : while (have_posts()) : the_post(); ?>
+					<li>
+						<article class="box-post">
+							<small><?php the_category( ', ' ); ?></small>
+							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							<hr>
+							<?php the_excerpt(); ?>
+							<a href="<?php the_permalink(); ?>" class="link">Read More &raquo;</a>
+						</article>
+					</li>
+			<?php endwhile; ?>
+			<!-- pagination -->
+			<?php else : ?>
+			<!-- No posts found -->
+			<?php endif; ?>
+
 			</ul>
-		</div>
-	</section>
-	<section class="box">
-		<div class="container">
-			[pagination]
+
+			<!-- start PAGINATION -->
+			<?php wpbeginner_numeric_posts_nav(); ?>
+			<!-- end PAGINATION --> 
+
 		</div>
 	</section>
 <?php get_footer(); ?>

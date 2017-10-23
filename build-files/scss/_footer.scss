@@ -21,7 +21,6 @@
 		font-weight: 700;
 	}
 }
-
 .socials {
 	@include formated-list;
 	margin-top: 50px;
@@ -38,6 +37,9 @@
 			width: 33px;
 			text-align: center;
 			line-height: 33px;
+			i {
+				line-height: 33px;
+			}
 			&:hover {
 				background: $brand-primary;
 				color: white;

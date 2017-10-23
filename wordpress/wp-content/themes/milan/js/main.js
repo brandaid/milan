@@ -12,6 +12,8 @@ $(document).ready(function() {
         $(this).toggleClass('toggle-on');
     });
 
+    $('div.navigation').addClass('cf');
+
 	//NAVBAR
 
 	var menuRight = document.getElementById( 'cbp-spmenu-s2' ),

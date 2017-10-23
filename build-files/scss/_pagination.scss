@@ -1,0 +1,116 @@
+.navigation {
+    text-align: center;
+}
+.pagination {
+    margin: 0;
+    padding: 0;
+    li {
+        padding: 0!important;
+        margin: 0 5px 5px 0px!important;
+        display: inline-block;
+        border: none!important;
+        vertical-align: middle;
+        color: #9ba4ae;
+        font-family: $primary-font;
+        &:before {
+            display: none;
+        }
+        &.active {
+            a {
+                background: #58a7dc;
+                color: white;
+                border-color: #58a7dc;
+            }
+        }
+        a {
+            color: $text-color;
+            border: 1px solid #d0d0d0;
+            border-radius: 50%;
+            text-align: center;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            font-size:0.875em; 
+            display: inline-block;
+            &:hover {
+                border-color: #58a7dc;
+            }
+        }
+        &.last, &.first {
+            a {
+               border: 1px solid $brand-primary;
+               color: $brand-primary;
+               padding: 15px 20px;
+               text-align: center;
+               display: inline-block;
+               font-size: 16px;
+               font-weight: 500;
+               background: transparent;
+               border-radius: 4px;
+               min-width: 130px;
+               &:hover {
+                background: $brand-primary;
+                color: white;
+               }
+            }
+        }
+        &.first {
+            width: 100%;
+            margin-bottom: 30px!important;
+        } 
+        &.last {       
+            width: 100%;
+            margin-top: 30px!important;
+        }
+        &.dot {
+            position: relative;
+            width: 32px;
+            height: 32px;
+            span {
+                position: absolute;
+                bottom: -18px;
+                left: 0;
+                right: 0;
+                text-align: center;
+            }
+        }
+    }
+}
+// > 768px
+@media all and (min-width: $screen-portrait) {
+    .navigation {
+        padding: 0 20px;
+        text-align: left;
+    }
+    .pagination {
+        li {
+            margin: 0 0 5px;
+            &.first {
+                width: auto;
+                margin-bottom: 0!important;
+                margin-right: 20px!important;
+            } 
+            &.last {       
+                width: auto;
+                margin-top: 0!important;
+                float: right;
+            }
+        }
+    }
+}
+// < 768px
+@media all and (max-width: $screen-portrait) {
+    .pagination {
+         li {
+            margin: 0 0 5px;
+        }
+    }
+}
+// 1200px
+@media all and (min-width: $screen-desktop) {
+    .pagination {
+         li {
+            margin: 0 5px 5px 5px;
+        }
+    }
+}

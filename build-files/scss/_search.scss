@@ -29,7 +29,22 @@
 		}
 	}
 }
-
+.search-result {
+	b,i {
+		font-family: $primary-font;
+		font-weight: 300;
+	}
+	i {
+		color: $gray;
+		font-size: 16px;
+	}
+}
+.box-no-results {
+	text-align: center;
+	color: black;
+	font-style: italic;
+	font-size: 16px;
+}
 // 768px
 @media all and (min-width: $screen-portrait) {
 }

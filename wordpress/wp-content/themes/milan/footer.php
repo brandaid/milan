@@ -1,5 +1,5 @@
 	</main>
-	<?php if (!is_page(16) && !is_page(14) && !is_single() ) { ?>
+	<?php if (!is_page(16) && !is_page(14) && !is_single() && !is_search() && !is_category() ) { ?>
 
 	<section class="box slider">
 		<div class="container">
@@ -45,7 +45,9 @@
 				<div class="col">
 					<ul class="socials">
 						<?php while(has_sub_field('social_network','option')): ?>
-							<li><a href="<?php the_sub_field('link','option'); ?>" class="fa <?php the_sub_field('icon','option'); ?>"></a></li>
+							<li><a href="<?php the_sub_field('link','option'); ?>" class="fa">
+								<?php the_sub_field('icon','option'); ?>
+							</a></li>
 						<?php endwhile; ?>
 					</ul>
 				</div>

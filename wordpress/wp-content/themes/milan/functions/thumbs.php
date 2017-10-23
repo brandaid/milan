@@ -9,6 +9,7 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'top_image', 1300, 210, true );
 	add_image_size( 'about_image', 1300, 720, true );
 	add_image_size( 'medium_new', 735, 500, true );
+	add_image_size( 'post', 850, 430, true );
 }
 
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
@@ -20,7 +21,8 @@ function my_custom_sizes( $sizes ) {
 		'insurance_home' => __('Insurance image'),
 		'top_image' => __('Top image'),
 		'about_image' => __('About image'),
-		'medium_new' => __('Medium image')
+		'medium_new' => __('Medium image'),
+		'post' => __('Post image')
 	) );
 }
 

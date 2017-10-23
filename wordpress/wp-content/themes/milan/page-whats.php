@@ -46,7 +46,7 @@
 			<ul class="three-columns">
 				<?php while(has_sub_field('list')): ?>
 				<li>
-					<img src="<?php bloginfo('template_url'); ?>/images/ico.png" alt="">
+					<?php the_sub_field('icon'); ?>
 					<h4><?php the_sub_field('title'); ?></h4>
 					<p><?php the_sub_field('copy'); ?></p>
 				</li>
