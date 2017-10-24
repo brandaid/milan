@@ -58,7 +58,7 @@
 							<small><?php the_category( ', ' ); ?></small>
 							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<hr>
-							<?php the_excerpt(); ?>
+							<p><?php the_field('pre'); ?></p>
 							<a href="<?php the_permalink(); ?>" class="link">Read More &raquo;</a>
 						</article>
 					</li>
