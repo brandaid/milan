@@ -2562,7 +2562,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin: 0; }
 
 .wpcf7 .message {
-  background: transparent; }
+  background: transparent !important; }
 
 .wpcf7-validation-errors,
 .wpcf7-mail-sent-ok {
