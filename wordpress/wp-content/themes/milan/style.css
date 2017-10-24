@@ -2559,7 +2559,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: none;
-  margin: 0; }
+  margin: 0;
+  -webkit-appearance: none; }
 
 .wpcf7 .message {
   background: transparent !important; }
