@@ -2675,7 +2675,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-weight: 300; }
 
 .box-post a.link {
-  text-decoration: underline; }
+  text-decoration: underline;
+  color: #5281ac; }
 
 .box-post a.link:hover {
   color: black; }
