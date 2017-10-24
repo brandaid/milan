@@ -49,7 +49,7 @@
 	}
 	a.link { 
 		text-decoration: underline;
-		color: $brand-primary;
+		color: $brand-primary!important;
 		&:hover {
 			color: black;
 		}
