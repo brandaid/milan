@@ -2561,6 +2561,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   outline: none;
   margin: 0; }
 
+.wpcf7 .message {
+  background: transparent; }
+
 .wpcf7-validation-errors,
 .wpcf7-mail-sent-ok {
   font-size: 14px;
