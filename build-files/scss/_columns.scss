@@ -49,11 +49,13 @@
 	}
 	a.link { 
 		text-decoration: underline;
-		color: $brand-primary!important;
 		&:hover {
 			color: black;
 		}
 	}
+}
+a.link {
+	color: $brand-primary;
 }
 .four-columns {
 	@include formated-list;
