@@ -54,11 +54,15 @@ blockquote, blockquote p {
   	line-height: 1.25;
 }
 
-
+.single {
+	ul, ol {
+		font-weight: 300;
+	}
+}
 ul, ol {
 	list-style-position: outside;
 	padding-left: 35px;
-	color: $gray;
+	color: $text-color;
 	font-size: 18px;
 	line-height: 1.4em;
 	margin-bottom: 40px;
@@ -154,6 +158,11 @@ ol ol, ul ol {
 	blockquote, blockquote p {
 	  	font-size: 1.5em;
 	  	line-height: 1.45833333;
+	}
+	.single {
+		ul, ol {
+			font-size: 21px;
+		}
 	}
 }
 
