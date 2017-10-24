@@ -2536,6 +2536,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   color: #4a4f55;
   font-size: 18px; }
 
+.contact-info a.link {
+  color: #5889b5; }
+
 .contact-info a:hover {
   text-decoration: underline; }
 
@@ -2688,9 +2691,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .box-post a.link:hover {
   color: black; }
-
-a.link {
-  color: #5281ac; }
 
 .four-columns, .three-columns {
   padding: 0;
