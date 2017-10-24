@@ -10,12 +10,13 @@
 					<form id="category-select" class="category-select" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 			            <?php
 			                $args = array(
-			                    'show_option_none' => __( 'Categories'),
-			                    'show_count'       => 0,
-			                    'orderby'          => 'name',
-			                    'echo'             => 0,
-			                    'option_none_value'  => null,
-			                    //'show_option_none' => '', 
+			                    'show_option_all'    => '',
+								'show_option_none'   => '',
+								'option_none_value'  => '-1',
+			                    'show_count'         => 0,
+			                    'hide_empty'         => 1,
+			                    'orderby'            => 'name',
+			                    'echo'               => 0
 			                );
 			            ?>
 			            <?php $select  = wp_dropdown_categories( $args ); ?>
