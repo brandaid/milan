@@ -2545,7 +2545,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
   -webkit-border-radius: 4px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  -webkit-appearance: none; }
 
 .wpcf7 textarea {
   height: 275px;

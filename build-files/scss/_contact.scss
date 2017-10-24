@@ -45,6 +45,7 @@
 		@include boxshadow;
 		margin-bottom: 40px;
 		border-radius: 4px;
+		-webkit-appearance: none;
 	}
 	textarea {
 		height: 275px;
