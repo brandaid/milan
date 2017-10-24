@@ -67,6 +67,9 @@
 
 .gray {
 	background: lighten($gray-light,4%);
+	h3 {
+		font-size: 36px;
+	}
 }
 // 768px
 @media all and (min-width: $screen-portrait) {
