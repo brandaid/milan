@@ -30,7 +30,8 @@
 				<a href="#welcome" class="ico-scroll">SCROLL</a>
 			</div>	
 		</section>
-		<section class="box welcome" id="welcome">
+		<div id="welcome"></div>	
+		<section class="box welcome">
 			<div class="container">
 				<h4><?php the_field('small_text'); ?></h4>
 				<h2><?php the_field('box_title'); ?></h2>

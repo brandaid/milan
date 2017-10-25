@@ -60,7 +60,8 @@
 		top: -60px;
 		left: 13px;
 	}
-	&:hover {
+	&:hover,
+	&:focus {
 		color: white;
 		&:after {
 			top: -45px;
@@ -100,6 +101,10 @@
 		display: table-cell;
 		vertical-align: middle;
 		height: 100%;
+	}
+	#welcome {
+		position: relative;
+		top: -80px;
 	}
 }
 

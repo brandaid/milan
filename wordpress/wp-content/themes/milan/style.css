@@ -1802,13 +1802,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   top: -60px;
   left: 13px; }
 
-.ico-scroll:hover {
+.ico-scroll:hover, .ico-scroll:focus {
   color: white; }
 
-.ico-scroll:hover:after {
+.ico-scroll:hover:after, .ico-scroll:focus:after {
   top: -45px; }
 
-.ico-scroll:hover:before {
+.ico-scroll:hover:before, .ico-scroll:focus:before {
   top: -55px; }
 
 @media all and (min-width: 768px) {
@@ -1830,7 +1830,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .center-hero--info {
     display: table-cell;
     vertical-align: middle;
-    height: 100%; } }
+    height: 100%; }
+  #welcome {
+    position: relative;
+    top: -80px; } }
 
 @media all and (min-width: 1200px) {
   .hero-banner h1 {
