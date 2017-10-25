@@ -851,7 +851,11 @@ ol ol, ul ol {
   margin: 0; }
 
 .lighter {
-  font-weight: 300; }
+  font-weight: 300;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 @media all and (min-width: 768px) {
   p {
@@ -2409,13 +2413,17 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .image-and-text .container .info ul li {
   margin-bottom: 10px;
   font-size: 14px;
-  list-style: none; }
+  list-style: none;
+  padding-left: 30px;
+  position: relative; }
 
 .image-and-text .container .info ul li:before {
   content: "•";
+  left: 0;
   margin-right: 20px;
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  position: absolute; }
 
 .image-and-text .container .info p {
   font-size: 16px;
