@@ -55,9 +55,9 @@
 			}
 			.col-nav-featured {
 				text-align: right;
-				.button {
-					padding: 18px 40px;
-				}
+				// .button {
+				// 	padding: 18px 40px;
+				// }
 			}
 		}
 	}
@@ -65,4 +65,19 @@
 
 // 1200px
 @media all and (min-width: $screen-desktop) {
+	.header {
+		.container {
+			.col-brand {
+				width: 28%;
+			}
+			.col-nav-featured {
+				width: 22%;
+			}
+		}
+	}
+	.brand {
+		img {
+			max-width: 200px;
+		}
+	}
 }

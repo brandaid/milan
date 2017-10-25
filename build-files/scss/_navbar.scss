@@ -112,4 +112,12 @@
 
 // 1200px
 @media all and (min-width: $screen-desktop) {
+	.nav-featured {
+		li {
+			a {
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}	
+		}
+	}
 }

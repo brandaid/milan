@@ -199,9 +199,15 @@ a, a:hover, a:active, a:focus {
     display: table-cell;
     width: 25%; }
   .header .container .col-nav-featured {
-    text-align: right; }
-  .header .container .col-nav-featured .button, .header .container .col-nav-featured .button-solid, .header .container .col-nav-featured .wpcf7 input[type=submit], .wpcf7 .header .container .col-nav-featured input[type=submit] {
-    padding: 18px 40px; } }
+    text-align: right; } }
+
+@media all and (min-width: 1200px) {
+  .header .container .col-brand {
+    width: 28%; }
+  .header .container .col-nav-featured {
+    width: 22%; }
+  .brand img {
+    max-width: 200px; } }
 
 .footer-top {
   background: #4a4f55;
@@ -389,6 +395,11 @@ a, a:hover, a:active, a:focus {
     display: none; }
   #menu-desktop {
     display: block; } }
+
+@media all and (min-width: 1200px) {
+  .nav-featured li a {
+    padding-top: 15px;
+    padding-bottom: 15px; } }
 
 /* Mobile first layout SmartMenus Core CSS (it's not recommended editing these rules)
    You need this once per page no matter how many menu trees or different themes you use.
