@@ -2669,6 +2669,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .box-post {
   background: white;
+  text-align: left;
   padding: 30px;
   margin-bottom: 50px;
   -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
