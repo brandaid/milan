@@ -2753,7 +2753,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     font-size: 38px;
     line-height: 1.2em; }
   .box-post hr {
-    margin: 36px 0; }
+    margin: 36px auto 36px 0; }
   .box-post p, .box-post a {
     font-size: 21px; }
   .four-columns li, .three-columns li {
