@@ -48,6 +48,9 @@ body.single {
 	}
 }
 
+body.page-template-page-blog > section.box.slider {
+	display: none;
+}
 // 768px
 @media all and (min-width: $screen-portrait) {
 

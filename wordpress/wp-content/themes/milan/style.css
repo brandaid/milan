@@ -2872,6 +2872,9 @@ body.single .main .container .box-post {
   text-transform: uppercase;
   color: #5889b5; }
 
+body.page-template-page-blog > section.box.slider {
+  display: none; }
+
 @media all and (min-width: 992px) {
   body.single .main {
     padding-top: 200px; }
