@@ -1836,12 +1836,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 @media all and (min-width: 992px) {
   .hero-banner {
-    height: 100vh;
+    height: -webkit-calc(100vh - 155px);
+    height: calc(100vh - 155px);
     padding: 0; }
   .center-hero {
     display: table;
     width: 100%;
-    height: 100vh; }
+    height: -webkit-calc(100vh - 155px);
+    height: calc(100vh - 155px); }
   .center-hero--info {
     display: table-cell;
     vertical-align: middle;
