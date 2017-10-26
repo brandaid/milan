@@ -181,6 +181,13 @@ a, a:hover, a:active, a:focus {
   height: auto;
   max-width: 190px; }
 
+#wpadminbar {
+  top: -48px !important; }
+
+@media all and (min-width: 601px) {
+  #wpadminbar {
+    top: 0 !important; } }
+
 @media all and (min-width: 992px) {
   .header {
     position: fixed;
@@ -199,7 +206,9 @@ a, a:hover, a:active, a:focus {
     display: table-cell;
     width: 25%; }
   .header .container .col-nav-featured {
-    text-align: right; } }
+    text-align: right; }
+  .customize-support .header {
+    top: 32px; } }
 
 @media all and (min-width: 1200px) {
   .header .container .col-brand {

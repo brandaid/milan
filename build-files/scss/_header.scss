@@ -27,10 +27,14 @@
 	}
 }
 
-
-// 768px
-@media all and (min-width: $screen-portrait) {
-
+#wpadminbar {
+	top: -48px!important;
+}
+// 601px
+@media all and (min-width: 601px) {
+	#wpadminbar {
+		top: 0!important;
+	}
 }
 
 // 992px
@@ -59,6 +63,11 @@
 				// 	padding: 18px 40px;
 				// }
 			}
+		}
+	}
+	.customize-support {
+		.header {
+			top: 32px;
 		}
 	}
 }
