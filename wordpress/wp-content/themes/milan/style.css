@@ -2258,11 +2258,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 @media all and (min-width: 600px) {
   .newsletter-form {
+    background: white;
     display: table;
     width: 100%;
     max-width: 424px;
     margin-left: auto;
     margin-right: auto;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
     -webkit-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1); }
   .newsletter-form--input,
