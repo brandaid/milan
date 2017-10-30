@@ -1,4 +1,5 @@
-.newsletter-form {
+.newsletter-form,
+.mc4wp-form {
 	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	  color: $text-color;
 	}
@@ -80,7 +81,8 @@
 
 // 600px
 @media all and (min-width: 600px) {
-	.newsletter-form {
+	.newsletter-form,
+	.mc4wp-form {
 		background: white;
 		display: table;
 		width: 100%;

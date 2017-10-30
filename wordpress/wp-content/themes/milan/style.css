@@ -2185,19 +2185,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .owl-testimonials .owl-next {
     right: -100px; } }
 
-.newsletter-form ::-webkit-input-placeholder {
+.newsletter-form ::-webkit-input-placeholder,
+.mc4wp-form ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #525a74; }
 
-.newsletter-form ::-moz-placeholder {
+.newsletter-form ::-moz-placeholder,
+.mc4wp-form ::-moz-placeholder {
   /* Firefox 19+ */
   color: #525a74; }
 
-.newsletter-form :-ms-input-placeholder {
+.newsletter-form :-ms-input-placeholder,
+.mc4wp-form :-ms-input-placeholder {
   /* IE 10+ */
   color: #525a74; }
 
-.newsletter-form :-moz-placeholder {
+.newsletter-form :-moz-placeholder,
+.mc4wp-form :-moz-placeholder {
   /* Firefox 18- */
   color: #525a74; }
 
@@ -2268,7 +2272,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   outline: none; }
 
 @media all and (min-width: 600px) {
-  .newsletter-form {
+  .newsletter-form,
+  .mc4wp-form {
     background: white;
     display: table;
     width: 100%;
