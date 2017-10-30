@@ -25,12 +25,14 @@
 		<div class="container">
 			<h3><?php the_field('title_newsletter','option'); ?></h3>
 			<p><?php the_field('subtitle_newsletter','option'); ?></p>
-			<?php the_field('form_code','option') ?>
+			<div class="newsletter-form">
+				<?php the_field('form_code','option') ?>
+			</div>
+			
 			<form action="" class="newsletter-form">
 				<input type="email" name="EMAIL" class="newsletter-form--input" placeholder="Enter your business email">
 				<button class="newsletter-form--button">Get Started</button>
 			</form>
-			[mc4wp_form id="247"]
 		</div>
 	</section>
 	<footer class="footer">
