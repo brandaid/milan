@@ -87,8 +87,23 @@
 	background: #8dcfbb;
 }
 
+
+
 // 768px
 @media all and (min-width: $screen-portrait) {
+	.mc4wp-form-fields {
+		display: table;
+		width: 100%;
+	}
+	.mc4wp-form {
+		position: relative;
+	}
+	.mc4wp-response {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: red;
+	}
 	.table-boxes {
 		display: table;
 		width: 100%;

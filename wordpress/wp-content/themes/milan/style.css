@@ -2635,6 +2635,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background: #8dcfbb; }
 
 @media all and (min-width: 768px) {
+  .mc4wp-form-fields {
+    display: table;
+    width: 100%; }
+  .mc4wp-form {
+    position: relative; }
+  .mc4wp-response {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: red; }
   .table-boxes {
     display: table;
     width: 100%; }
