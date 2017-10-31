@@ -85,7 +85,6 @@
 		width: 100%;
 		max-width: 424px;
 		@include center;
-		box-shadow: 0 0 40px 0 rgba(0,0,0,0.1);
 	}
 	.newsletter-form--input,
 	.newsletter-form--button {
@@ -106,6 +105,7 @@
 		width: 100%;
 		border-radius: 5px;
 		background: white;
+		box-shadow: 0 0 40px 0 rgba(0,0,0,0.1);
 	}
 }
 
