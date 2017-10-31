@@ -57,9 +57,7 @@
 	padding: 16px;
 	@include border-box;
 	margin-bottom: 70px;
-
 }
-
 .category-select select {
     padding: 0px 8px 5px 8px;
     width: 100%;
@@ -104,6 +102,10 @@
 	.newsletter-form--button {
 		border-radius: 0 5px 5px 0;
 		width: 30%;
+	}
+	.mc4wp-form-fields {
+		display: table;
+		width: 100%;
 	}
 }
 
